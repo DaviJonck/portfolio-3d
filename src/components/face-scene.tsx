@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { Canvas, type ThreeElements } from "@react-three/fiber";
 import { Environment, OrbitControls, useGLTF } from "@react-three/drei";
 
@@ -14,12 +14,44 @@ function OfficerModel(props: ThreeElements["group"]) {
   );
 }
 
+function SceneContent({ onLoaded }: { onLoaded: () => void }) {
+  useEffect(() => {
+    onLoaded();
+  }, [onLoaded]);
+
+  return (
+    <>
+      <OfficerModel position={[0, -1, 0]} scale={1.4} />
+      <mesh position={[0, -1.4, 0]} receiveShadow rotation-x={-Math.PI / 2}>
+        <circleGeometry args={[2.4, 64]} />
+        <meshStandardMaterial color="#000000" opacity={0.8} transparent />
+      </mesh>
+      <Environment preset="city" />
+    </>
+  );
+}
+
 useGLTF.preload("/officer.glb");
 
 export function FaceScene() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="relative h-64 w-full md:h-80 lg:h-[22rem]">
       <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-500/20 via-transparent to-sky-500/10 blur-3xl" />
+
+      {loading && (
+        <div
+          className="absolute inset-0 z-10 flex items-center justify-center rounded-3xl bg-[#050505]/95"
+          aria-hidden="true"
+        >
+          <div
+            className="h-10 w-10 animate-spin rounded-full border-2 border-emerald-500/30 border-t-emerald-400"
+            role="presentation"
+          />
+        </div>
+      )}
+
       <Canvas
         className="!absolute inset-0"
         camera={{ position: [0, 0, 3.4], fov: 45 }}
@@ -40,15 +72,7 @@ export function FaceScene() {
           color={"#22c55e"}
         />
         <Suspense fallback={null}>
-          <OfficerModel position={[0, -1, 0]} scale={1.4} />
-
-          {/* sombra no "chão" para dar profundidade */}
-          <mesh position={[0, -1.4, 0]} receiveShadow rotation-x={-Math.PI / 2}>
-            <circleGeometry args={[2.4, 64]} />
-            <meshStandardMaterial color="#000000" opacity={0.8} transparent />
-          </mesh>
-
-          <Environment preset="city" />
+          <SceneContent onLoaded={() => setLoading(false)} />
         </Suspense>
         <OrbitControls
           enablePan={false}
