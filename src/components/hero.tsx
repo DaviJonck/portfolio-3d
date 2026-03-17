@@ -27,14 +27,12 @@ export function Hero() {
             Front-end Developer • React • Next.js • TypeScript
           </p>
           <h1 className="text-xl font-semibold tracking-tight text-zinc-100 sm:text-2xl md:text-3xl">
-            Construindo aplicações web escaláveis e confiáveis.
+            Front-end: React, Next.js, TypeScript.
           </h1>
           <p className="max-w-xl text-xs text-zinc-400 sm:text-sm">
-            Desenvolvedor Front-end desde 2020 em produtos de alto volume .
-            Migração de sistemas legados para Next.js, React e TypeScript;
-            observabilidade com Datadog, automação com Argo CD, testes com Jest
-            e React Testing Library. Foco em performance, qualidade de código e
-            entrega confiável.
+            Desde 2020 em produtos de alto volume (HealthTech). Migração de
+            legado para Next.js + React + TypeScript; Datadog, Argo CD, Jest e
+            React Testing Library no dia a dia.
           </p>
         </div>
 

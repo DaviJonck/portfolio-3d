@@ -12,10 +12,10 @@ export default function Home() {
         <header className="flex items-center justify-between border-b border-zinc-800/80 pb-3 text-xs text-zinc-500">
           <div className="flex items-center gap-3">
             <span className="rounded bg-emerald-500/10 px-2 py-0.5 text-[11px] text-emerald-400">
-              PORTFOLIO.tsx
+              portfolio
             </span>
             <span className="hidden text-zinc-600 sm:inline">
-              src/app/page.tsx
+              início
             </span>
           </div>
           <div className="flex items-center gap-3">

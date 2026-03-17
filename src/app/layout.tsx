@@ -9,8 +9,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
-  description: "Portfólio single page com estética de IDE/Terminal.",
+  title: "Davi Jonck — Front-end",
+  description: "Portfólio de Davi Jonck. React, Next.js, TypeScript.",
 };
 
 export default function RootLayout({

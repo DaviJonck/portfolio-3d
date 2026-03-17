@@ -48,7 +48,7 @@ export function ProjectsSection() {
       <SectionHeader
         label="Projetos"
         title="Repositório de projetos"
-        description="Alguns dos experimentos e produtos que venho construindo."
+        description="Projetos em que trabalhei ou que mantenho."
       />
 
       <CodeWindow

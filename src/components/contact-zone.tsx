@@ -11,7 +11,7 @@ export function ContactZone() {
       <SectionHeader
         label="Contato"
         title="Debug Console / .env"
-        description="Se algo aqui chamou sua atenção, você pode abrir uma issue, mandar um e-mail ou só me pingar nas redes."
+        description="E-mail, GitHub, LinkedIn ou telefone — pode mandar mensagem."
       />
 
       <CodeWindow

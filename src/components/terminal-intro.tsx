@@ -21,7 +21,7 @@ const LINES = [
   '  observability: "Datadog",',
   '  automation: "Argo CD",',
   "  highlight:",
-  '    "Migração de sistemas legados para arquiteturas modernas que atendem milhões de usuários.",',
+  '    "Legado → Next.js + TypeScript, com testes e observabilidade em produção.",',
   "};",
 ];
 
@@ -82,7 +82,7 @@ export function TerminalIntro() {
       <div className="relative flex h-full flex-col gap-3 bg-gradient-to-b from-black/40 to-black/5 px-4 pr-3 pb-4 pt-3 text-xs text-emerald-100 sm:text-sm overflow-hidden">
         <div className="flex items-center gap-2 text-[11px] text-zinc-500">
           <TerminalSquare className="h-3.5 w-3.5 text-emerald-400" />
-          <span>/Users/you/dev/portfolio-3d</span>
+          <span>~/portfolio</span>
         </div>
         <motion.pre
           className="mt-1 min-h-[8.5rem] whitespace-pre-wrap break-words font-mono text-[11px] leading-relaxed text-zinc-100 sm:text-[12px]"

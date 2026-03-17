@@ -57,7 +57,7 @@ export function BentoStacks() {
       <SectionHeader
         label="Stacks"
         title="Bento grid de tecnologias"
-        description="Uma visão rápida do ecossistema que uso no dia a dia para construir experiências ricas e performáticas."
+        description="Ferramentas e stacks que uso no dia a dia."
       />
 
       <CodeWindow

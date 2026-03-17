@@ -11,7 +11,7 @@ export function StatusBar() {
       </div>
       <div className="hidden items-center gap-1.5 sm:flex">
         <Network className="h-3.5 w-3.5 text-emerald-400" />
-        <span>localhost:3000</span>
+        <span>portfolio</span>
       </div>
       <div className="ml-auto flex items-center gap-1.5">
         <Timer className="h-3.5 w-3.5 text-emerald-400" />
